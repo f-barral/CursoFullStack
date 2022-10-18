@@ -22,6 +22,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
 
     <meta name="theme-color" content="#fafafa">
 </head>
@@ -74,7 +75,7 @@
                 <a href="#">CONFERENCIA</a>
                 <a href="#">CALENDARIO</a>
                 <a href="#">INVITADOS</a>
-                <a href="#">RESERVACIONES</a>
+                <a href="registro.html">RESERVACIONES</a>
             </nav>
             <!-- Fin nav -->
         </div>
@@ -91,7 +92,7 @@
 
     <section class="programa">
         <div class="contenedor-video">
-            <video autoplay loop poster="./img/bg-talleres.jpg">
+            <video autoplay loop muted poster="./img/bg-talleres.jpg">
                 <source src="./video/video.mp4" type="video/mp4">
                 <source src="./video/video.webm" type="video/webm">
                 <source src="./video/video.ogv" type="video/ogv">
@@ -368,9 +369,12 @@
 
     </footer>
 
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
     <script src="js/vendor/modernizr-3.11.2.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/leaflet.js"></script>
+
 
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
     <script>

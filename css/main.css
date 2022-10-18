@@ -4,15 +4,15 @@
 
 
 /*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
+* What follows is the result of much research on cross-browser styling.
+* Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+* Kroc Camen, and the H5BP dev community and team.
+*/
 
 
 /* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
+Base styles: opinionated defaults
+========================================================================== */
 
 html {
     color: #222;
@@ -22,14 +22,14 @@ html {
 
 
 /*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Vendor-prefixed and regular ::selection selectors cannot be combined:
- * https://stackoverflow.com/a/16982510/7133471
- *
- * Customize the background color to match your design.
- */
+* Remove text-shadow in selection highlight:
+* https://twitter.com/miketaylr/status/12228805301
+*
+* Vendor-prefixed and regular ::selection selectors cannot be combined:
+* https://stackoverflow.com/a/16982510/7133471
+*
+* Customize the background color to match your design.
+*/
 
  ::-moz-selection {
     background: #b3d4fc;
@@ -43,8 +43,8 @@ html {
 
 
 /*
- * A better looking default horizontal rule
- */
+* A better looking default horizontal rule
+*/
 
 hr {
     display: block;
@@ -57,10 +57,10 @@ hr {
 
 
 /*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
+* Remove the gap between audio, canvas, iframes,
+* images, videos and the bottom of their containers:
+* https://github.com/h5bp/html5-boilerplate/issues/440
+*/
 
 audio,
 canvas,
@@ -73,8 +73,8 @@ video {
 
 
 /*
- * Remove default fieldset styles.
- */
+* Remove default fieldset styles.
+*/
 
 fieldset {
     border: 0;
@@ -84,8 +84,8 @@ fieldset {
 
 
 /*
- * Allow only vertical resizing of textareas.
- */
+* Allow only vertical resizing of textareas.
+*/
 
 textarea {
     resize: vertical;
@@ -93,8 +93,8 @@ textarea {
 
 
 /* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+Author's custom styles
+========================================================================== */
 
 html {
     box-sizing: border-box;
@@ -121,6 +121,10 @@ body {
     text-align: center;
 }
 
+label {
+    font-size: 1.2rem;
+}
+
 h2 {
     font-family: 'Oswald', sans-serif;
     font-size: 2.4rem;
@@ -141,6 +145,14 @@ h3 {
     font-size: 1.8rem;
     margin: 0px;
     color: #fe4918;
+}
+
+h4 {
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 2px solid #fe4918;
+    padding-bottom: 10px;
+    font-size: 1.5rem;
 }
 
 .contenedor {
@@ -462,6 +474,9 @@ h3 {
 
 /** Detalle Evento **/
 
+
+/** Detalle Evento **/
+
 .detalle-evento {
     margin-top: 2rem;
     border-bottom: 1px solid gray;
@@ -717,7 +732,6 @@ ul {
 
 .mapa {
     height: 420px;
-    background-color: green;
 }
 
 
@@ -927,14 +941,159 @@ footer p span {
 }
 
 
+/*** Páginas INTERNAS  ***/
+
+
+/* Registros */
+
+form.registro h3 {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 2rem 0 0 0;
+}
+
+form.registro label {
+    margin-bottom: 5px;
+}
+
+form.registro p {
+    font-weight: bold;
+}
+
+.caja {
+    background-color: white;
+    border: 1px solid #e1e1e1;
+    padding: 10px;
+    margin: 10px;
+}
+
+div.campo {
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    div.campo {
+        float: left;
+        width: 33.3%;
+    }
+}
+
+.paquetes .tabla-precios:hover {
+    scale: none;
+}
+
+.orden {
+    margin-top: 20px;
+}
+
+.paquetes .tabla-precios input {
+    clear: both;
+    width: 100px;
+    margin: 10px auto 0 auto;
+    display: block;
+}
+
+.contenido-dia {
+    padding: 20px;
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .contenido-dia>div {
+        /**Aplica al primer hijo**/
+        float: left;
+        width: 33.3%;
+        padding-right: 20px;
+    }
+    .contenido-dia div:last-child {
+        padding-right: 0px;
+    }
+}
+
+.contenido-dia p {
+    text-align: left;
+}
+
+.contenido-dia label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.contenido-dia input {
+    margin-right: 10px;
+}
+
+.contenido-dia label time {
+    color: #fe4918;
+    font-weight: bold;
+}
+
+
+/* Resumen registro */
+
+.resumen p {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+    .caja .extras {
+        float: left;
+        width: 50%;
+        padding: 10px;
+    }
+    .caja .total {
+        float: right;
+        width: 50%;
+        padding: 10px;
+    }
+}
+
+.extras .orden input {
+    margin: 10px 0 0 0px;
+    width: 50px;
+}
+
+.caja .extras .orden {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.suma-total {
+    text-align: center;
+}
+
+#lista-productos {
+    background-color: #e1e1e1;
+    padding: 20px;
+    font-size: 1.2rem;
+    display: none;
+}
+
+#suma-total {
+    text-align: center;
+    font-size: 2rem;
+    color: #fe4918;
+    font-weight: bold;
+}
+
+#error {
+    clear: both;
+    text-align: center;
+    padding: 10px;
+    color: #fe4918;
+    font-weight: bold;
+}
+
+
 /* ==========================================================================
-   Helper classes
-   ========================================================================== */
+Helper classes
+========================================================================== */
 
 
 /*
- * Hide visually and from screen readers
- */
+* Hide visually and from screen readers
+*/
 
 .hidden,
 [hidden] {
@@ -943,13 +1102,13 @@ footer p span {
 
 
 /*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+* 1. For long content, line feeds are not interpreted as spaces and small width
+*    causes content to wrap 1 word per line:
+*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
 
 .sr-only {
     border: 0;
@@ -966,10 +1125,10 @@ footer p span {
 
 
 /*
- * Extends the .sr-only class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
+* Extends the .sr-only class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
 
 .sr-only.focusable:active,
 .sr-only.focusable:focus {
@@ -984,8 +1143,8 @@ footer p span {
 
 
 /*
- * Hide visually and from screen readers, but maintain layout
- */
+* Hide visually and from screen readers, but maintain layout
+*/
 
 .invisible {
     visibility: hidden;
@@ -993,16 +1152,16 @@ footer p span {
 
 
 /*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
 
 .clearfix::before,
 .clearfix::after {
@@ -1016,10 +1175,10 @@ footer p span {
 
 
 /* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
+EXAMPLE Media Queries for Responsive Design.
+These examples override the primary ('mobile first') styles.
+Modify as content requires.
+========================================================================== */
 
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
@@ -1034,10 +1193,10 @@ footer p span {
 
 
 /* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
+Print styles.
+Inlined to avoid the additional HTTP request:
+https://www.phpied.com/delay-loading-your-print-css/
+========================================================================== */
 
 @media print {
     *,
@@ -1060,9 +1219,9 @@ footer p span {
         content: " (" attr(title) ")";
     }
     /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
+* Don't show links that are fragment identifiers,
+* or use the `javascript:` pseudo protocol
+*/
     a[href^="#"]::after,
     a[href^="javascript:"]::after {
         content: "";
@@ -1076,9 +1235,9 @@ footer p span {
         page-break-inside: avoid;
     }
     /*
-   * Printing Tables:
-   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
-   */
+* Printing Tables:
+* https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+*/
     thead {
         display: table-header-group;
     }
