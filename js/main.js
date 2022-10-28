@@ -160,3 +160,35 @@
 
     });
 })();
+
+$(function() {
+    //Programa de Conferencias
+    $('.programa-evento .info-curso').hide();
+    //Programa de conferencias
+    $('.menu-programa a:first').addClass("activo");
+    $('.menu-programa a').on("click", function() {
+        $('.menu-programa a').removeClass("activo");
+        $(this).addClass("activo");
+        $('.programa-evento .info-curso').hide();
+        var enlace = $(this).attr('href');
+        $(enlace).fadeIn();
+        return false;
+    });
+
+    //Lettering
+    $('.nombre-sitio').lettering();
+
+    //Aninación para los Números
+    $('.resumen-evento li:nth-child(1) p').animateNumber({ number: 6 }, 4000);
+    $('.resumen-evento li:nth-child(2) p').animateNumber({ number: 15 }, 4000);
+    $('.resumen-evento li:nth-child(3) p').animateNumber({ number: 3 }, 4000);
+    $('.resumen-evento li:nth-child(4) p').animateNumber({ number: 45 }, 4000);
+
+    //Cuenta regresiva
+    $('.cuenta-regresiva').countdown('2022/11/17 09:00:00', function(event) {
+        $('#dias').html(event.strftime('%D'));
+        $('#horas').html(event.strftime('%H'));
+        $('#minutos').html(event.strftime('%M'));
+        $('#segundos').html(event.strftime('%S'));
+    });
+});
